@@ -8,14 +8,59 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView {
+            StatisticView()
+                .tabItem {
+                    Tab(imageName:"chart.bar", text: "Statistics")
+                }
+            
+            
+            NewsView()
+                .tabItem {
+                    Tab(imageName:"newspaper", text: "News")
+                }
+            
+            
+            VaccineView()
+                .tabItem {
+                    Tab(imageName:"cross", text: "Vaccines")
+                }
+            
+            
+            SymptomsView()
+                .tabItem {
+                    Tab(imageName:"waveform.path.ecg", text: "Symptoms")
+                }
+            
+            
+            
+            
+            
+            
+        }
+        
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+private struct Tab: View{
+    
+    let imageName: String
+    let text: String
+    
+    var body: some View{
+        VStack{
+            Image(systemName: imageName)
+            Text(text)
+        }
+        
     }
+    
+    
 }
+
