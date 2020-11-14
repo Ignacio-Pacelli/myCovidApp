@@ -15,9 +15,6 @@ struct CountryDetailView: View {
     var color:Color = .black
 
     
-    
-    
-    
     var body: some View {
         
         GeometryReader{ geometry in

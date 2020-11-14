@@ -10,7 +10,7 @@ import SwiftUI
 struct TotalDataCardView: View {
     
     var totalData: TotalData
-    @State var Currentpage = 0
+    
     
     var body: some View {
         

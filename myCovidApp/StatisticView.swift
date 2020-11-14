@@ -36,8 +36,12 @@ struct StatisticView: View {
                         self.searchText.isEmpty ? true : $0.country.lowercased().contains(self.searchText.lowercased())
                         //And we are returning the countryData Object
                     }, id: \.country) {countryData in
-                    
-                        CountryDataRowView(countryData: countryData)
+                        NavigationLink(
+                            destination: CountryInfoView(countryData: countryData)){
+                            CountryDataRowView(countryData: countryData)
+                            
+                        }
+                            
                 }
                     
             }//End os VStack
@@ -62,6 +66,7 @@ struct StatisticView: View {
         }//End of NavigationView
         
             .background(Color(.systemGray))
+            
             
             
         

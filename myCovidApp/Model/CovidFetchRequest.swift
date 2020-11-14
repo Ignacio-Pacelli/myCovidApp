@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class CovidFetchRequest: ObservableObject {
     
-    @Published var allNews: [NewsData] = []
+    
     @Published var allCountries: [CountryData] = []
     @Published var totalData: TotalData = testTotalData
     
@@ -22,7 +22,7 @@ class CovidFetchRequest: ObservableObject {
     
     init() {
         
-        getNews()
+        
         getListCountries()
         getCurrentTotal()
     }
@@ -95,30 +95,9 @@ class CovidFetchRequest: ObservableObject {
     }
     
     
-    func getNews() {
-        
-        let headers: HTTPHeaders = [
-            "x-rapidapi-key": "1159b53032msh71d16f42f5f2570p115937jsnd8fc9be88e43",
-            "x-rapidapi-host": "covid-19-news.p.rapidapi.com"
-        ]
-        
-        
-        AF.request("https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&media=True", headers: headers).responseJSON { response in
-            
-            let result = response.value
-            
-            var allNews: [NewsData] = []
-            
-            if result != nil {
-                
-               // debugPrint(response)
-                
-               
-        }
- 
-    }
+    
  
     
 }
 
-}
+
