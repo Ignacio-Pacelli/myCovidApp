@@ -15,23 +15,34 @@ struct TotalDataCardView: View {
     var body: some View {
         
         
+        ScrollView(.horizontal, showsIndicators: false){
+            
+            
         VStack{
+            
             HStack{
+                
+                
                 TotalDataView(number: totalData.recovered.formatNumber(), name: "Total Recovered",image: Image(uiImage: UIImage(systemName: "bandage")!))
+                    .frame(width: 300)
                 
                 TotalDataView(number: totalData.deaths.formatNumber(), name: "Total Deaths",image: Image(uiImage: UIImage(systemName: "waveform.path.ecg")!))
-                    
-            }//End of HStack
-            HStack{
+                    .frame(width: 300)
+                
                 TotalDataView(number: String (format: "%.2f",totalData.recoveredRate), name: "Recovered %",image: Image(uiImage: UIImage(systemName: "bandage")!))
+                    .frame(width: 300)
                 
                 TotalDataView(number: String (format: "%.2f",totalData.fatalityRate), name: "Death %",image: Image(uiImage: UIImage(systemName: "waveform.path.ecg")!))
+                    .frame(width: 300)
+            
             }//End of HStack
             
             
         }//End of VStack
-        .frame(width:380 ,height: 200, alignment: .center)
-        .padding(20)
+        .cornerRadius(12)
+        .padding()
+        
+        }
     }
 }
 

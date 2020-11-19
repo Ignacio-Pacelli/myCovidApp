@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class CovidFetchRequest: ObservableObject {
     
-    
+   
     @Published var allCountries: [CountryData] = []
     @Published var totalData: TotalData = testTotalData
     
@@ -25,7 +25,11 @@ class CovidFetchRequest: ObservableObject {
         
         getListCountries()
         getCurrentTotal()
+       
     }
+    
+    
+    
     
     func getCurrentTotal() {
         
@@ -67,7 +71,12 @@ class CovidFetchRequest: ObservableObject {
                 
                 let dataDictionary = result as! [Dictionary<String, AnyObject>]
                 
+                
+                
                 for countryData in dataDictionary {
+                    
+                   // print(countryData)
+                    
                     let country = countryData["country"] as? String ?? "Error"
                     let code = countryData["code"] as? String ?? "Error"
                     let critical = countryData["critical"] as? Int ?? 0
@@ -93,11 +102,13 @@ class CovidFetchRequest: ObservableObject {
                 
         }
     }
-    
-    
-    
- 
-    
+
+        
+        
+
 }
+
+    
+    
 
 

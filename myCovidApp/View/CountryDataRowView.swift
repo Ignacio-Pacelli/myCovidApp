@@ -17,30 +17,28 @@ struct CountryDataRowView: View {
         HStack{
             
             Text(countryData.code)
-                .font(.custom("Open Sans", size: 18))
+                .font(.custom("Helvetica Neue", size: 18))
                 .frame(width: 50, alignment: .leading)
                 .padding(.leading, 15)
                 
             Text(countryData.country)
-                .font(.custom("Open Sans", size: 18))
+                .font(.custom("Helvetica Neue", size: 18))
                 .frame(width: 120, alignment: .leading)
                 .padding(.leading, 5)
             
-            Image(systemName: "info.circle")
             
             Spacer()
             Text(countryData.confirmed.formatNumber())
-                .font(.custom("Open Sans", size: 18))
-                .frame(height: 50, alignment: .trailing)
+                .font(.custom("Helvetica Neue", size: 18))
+                .frame(width: 100, alignment: .trailing)
                 .padding(.trailing, 5)
                 .foregroundColor(.red)
                 
             }
-        .background(Color(.systemGray6))
-        .cornerRadius(15)
+       
         
     }
-   
+    
 
 
 }

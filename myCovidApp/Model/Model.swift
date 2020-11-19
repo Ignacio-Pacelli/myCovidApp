@@ -27,6 +27,7 @@ struct TotalData {
 
 
 struct CountryData {
+    
     let code:String
     let confirmed:Int
     let country:String
@@ -48,15 +49,9 @@ struct CountryData {
 }
 
 
-struct NewsData {
-    
-    let id: String
-    let score: String
-    let author: String
-    let clean_url: String
-    let link: String
 
-}
+
+
 
 
 
@@ -65,4 +60,3 @@ let testTotalData = TotalData(confirmed: 1000, critical: 100, deaths: 200, recov
 
 let testCountryData = CountryData(code: "ARG", confirmed: 1000, country: "Argentina", critical: 300, deaths: 100, latitude: 0.0, longitude: 0.0, recovered: 50)
 
- 
