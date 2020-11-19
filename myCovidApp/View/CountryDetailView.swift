@@ -17,19 +17,18 @@ struct CountryDetailView: View {
     
     var body: some View {
         
-        GeometryReader{ geometry in
-            
             VStack{
                 
                 Text(self.name)
-                    .font(.custom("Open Sans", size: 19))
+                    .font(.custom("Helvetica Neue", size: 19))
                     .padding(10)
                     .foregroundColor(self.color)
+                
                     
                 HStack{
                     
                     Text(self.number)
-                        .font(.custom("Open Sans", size: 25))
+                        .font(.custom("Helvetica Neue", size: 25))
                         .padding(10)
                         .foregroundColor(self.color)
                     
@@ -38,16 +37,11 @@ struct CountryDetailView: View {
                 
             }//End of VStack
             
-            .frame(width: geometry.size.width, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .background(Color("TotalDataColorBackground"))
-            .cornerRadius(8.0)
+            .cornerRadius(12)
+            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(red: 130/255, green: 130/255, blue: 130/255, opacity: 0.4), lineWidth: 2))
+            .padding([.top, .horizontal])
             
-           
-            
-            
-            
-            
-        }//End of Geometry
+        
     }
 }
 

@@ -18,8 +18,6 @@ struct StatisticView: View {
         
         NavigationView{
             
-            
-            
             VStack{
                 if isSearchVisible{
                     SearchView(searchText: $searchText)
@@ -27,7 +25,6 @@ struct StatisticView: View {
                 
                 
                 TotalDataCardView(totalData: covidFetch.totalData)
-                ListHeaderView()
                 //Here we are filtering our list depend on what search parameter we have
                 
                 List{
@@ -65,13 +62,14 @@ struct StatisticView: View {
                 )
         }//End of NavigationView
         
-            .background(Color(.systemGray))
+            .background(Color(.black))
             
             
             
         
             
     }
+        .background(Color(.black))
     
 }
     

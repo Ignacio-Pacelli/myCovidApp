@@ -22,12 +22,12 @@ struct CountryInfoRow: View {
                 
                 HStack{
                 Text(self.name)
-                    .font(.custom("Open Sans", size: 18))
+                    .font(.custom("Helvetica Neue", size: 18))
                     .padding(5)
                 
                 Spacer()
                 Text(self.number)
-                    .font(.custom("Open Sans", size: 21))
+                    .font(.custom("Helvetica Neue", size: 21))
                     .padding(5)
                 }
             }
