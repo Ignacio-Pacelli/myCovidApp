@@ -26,7 +26,7 @@ struct NewsView: View {
                 
                 NavigationLink(destination:
                  webView(url: i.url)
-                                .navigationBarTitle("", displayMode: .inline)) {
+                 .navigationBarTitle("", displayMode: .inline)) {
                     
                     HStack(spacing: 15){
                         
@@ -43,7 +43,7 @@ struct NewsView: View {
                             WebImage(url: URL(string: i.image), options: .highPriority, context: nil)
                                 .resizable()
                                 .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                                .cornerRadius(20)
+                                .cornerRadius(12)
                         
                         }
                         
@@ -92,7 +92,7 @@ class getNews: ObservableObject  {
     let url = URL(string: source)!
     let session = URLSession(configuration: .default)
     
-    session.dataTask(with: url) {(data, _, err) in
+    session.dataTask(with: url) {(data, resp, err) in
         
         if err != nil{
             
@@ -141,8 +141,6 @@ struct webView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView:WKWebView, context: UIViewRepresentableContext<webView>) {
-        
-        
         
         
     }
