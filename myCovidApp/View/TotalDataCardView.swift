@@ -26,8 +26,10 @@ struct TotalDataCardView: View {
                 TotalDataView(number: totalData.recovered.formatNumber(), name: "Total Recovered",image: Image(uiImage: UIImage(systemName: "bandage")!))
                     .frame(width: 300)
                 
+                
                 TotalDataView(number: totalData.deaths.formatNumber(), name: "Total Deaths",image: Image(uiImage: UIImage(systemName: "waveform.path.ecg")!))
                     .frame(width: 300)
+                
                 
                 TotalDataView(number: String (format: "%.2f",totalData.recoveredRate), name: "Recovered %",image: Image(uiImage: UIImage(systemName: "bandage")!))
                     .frame(width: 300)
@@ -41,8 +43,10 @@ struct TotalDataCardView: View {
         }//End of VStack
         .cornerRadius(12)
         .padding()
+        .background(Color(.black))
         
         }
+        
     }
 }
 
