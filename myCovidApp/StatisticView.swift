@@ -25,21 +25,45 @@ struct StatisticView: View {
                 
                 
                 TotalDataCardView(totalData: covidFetch.totalData)
-                //Here we are filtering our list depend on what search parameter we have
-                
-                List{
+                CountryDataRowTitleView()
                     
-                    ForEach(covidFetch.allCountries.filter {
+                //Here we are filtering our list depend on what search parameter we have
+
+                
+                VStack{
+                    List{
+                    
+                   
+                    
+                        ForEach(covidFetch.allCountries.filter {
+                        
                         self.searchText.isEmpty ? true : $0.country.lowercased().contains(self.searchText.lowercased())
+                        
                         //And we are returning the countryData Object
+                        
                     }, id: \.country) {countryData in
-                        NavigationLink(
+                        
+                            NavigationLink(
+                            
                             destination: CountryInfoView(countryData: countryData)){
                             CountryDataRowView(countryData: countryData)
+                               
+                            
                             
                         }
-                            
+                       
+                        
+                    }
+                        
+                        
+                    
+                    }
+                    
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(red: 130/255, green: 130/255, blue: 130/255, opacity: 0.4), lineWidth: 2))
+                    
                 }
+                   
+                
                     
             }//End os VStack
             
@@ -60,17 +84,16 @@ struct StatisticView: View {
                 
                 
                 )
+                
         }//End of NavigationView
         
-            .background(Color(.black))
-            
-            
-            
-        
+           
+      
             
     }
-        .background(Color(.black))
-    
+        
+        
 }
     
-}
+    
+

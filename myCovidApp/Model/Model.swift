@@ -56,6 +56,9 @@ struct CountryData {
 
 
 
+
+
+
 let testTotalData = TotalData(confirmed: 1000, critical: 100, deaths: 200, recovered: 50)
 
 let testCountryData = CountryData(code: "ARG", confirmed: 1000, country: "Argentina", critical: 300, deaths: 100, latitude: 0.0, longitude: 0.0, recovered: 50)

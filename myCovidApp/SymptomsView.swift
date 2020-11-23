@@ -65,15 +65,15 @@ struct SymptomsView: View {
             
             }
         
-            Spacer()
+            Spacer(minLength: 15)
+        
             
-            Text("https://www.worldometers.info/")
+            Link("https://www.worldometers.symptoms/",
+                  destination: URL(string: "https://www.worldometers.info/coronavirus/coronavirus-symptoms/")!)
                 .font(.subheadline)
-                .underline()
-                .font(.custom("Helvetica Neue", size: 15))
-                .foregroundColor(.orange)
-                .fontWeight(.light)
-                .padding()
+                .foregroundColor(.red)
+            
+            Spacer(minLength: 30)
             
         }
             

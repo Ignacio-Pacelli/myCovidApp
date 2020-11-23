@@ -36,11 +36,11 @@ struct VaccineRowView: View {
             
              }
                
-                
+            
         }
         .padding(5)
         .cornerRadius(8)
-        
+            
         
     }
         
